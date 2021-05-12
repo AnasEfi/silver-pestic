@@ -1,425 +1,46 @@
-<html>
-
-<style type="text/css">
-<!--
-a {color: darkblue; font-size: 24; font-weight: ; left: 10px}
-a:hover {color: red; font-size: 24; font-weight: ; left: 10px}
--->
-</style>
-
-<title>Задание1</title>
+<<html>
+<head>
 <meta http-equiv="content-type" content="text/html; charset=windows-1251">
-<SCRIPT language="javaScript">
-<!--
-function vv5()
-{window.open('vv5.html','dd','scrollbars=yes,toolbar=no,status=no,width=50,height=100,resizable=1,top=70,left=100');
-}
-//-->
-</SCRIPT>
-<SCRIPT language="javaScript">
-<!--
-function vv6()
-{window.open('vv6.html','dd','scrollbars=yes,toolbar=no,status=no,width=50,height=100,resizable=1,top=70,left=100');
-}
-//-->
-</SCRIPT>
-<SCRIPT language="javaScript">
-<!--
-function vv7()
-{window.open('vv7.html','dd','scrollbars=yes,toolbar=no,status=no,width=50,height=100,resizable=1,top=70,left=100');
-}
-//-->
-</SCRIPT>
-<SCRIPT language="javaScript">
-<!--
-function vv4()
-{window.open('vv4.html','dd','scrollbars=yes,toolbar=no,status=no,width=50,height=100,resizable=1,top=70,left=100');
-}
-//-->
-</SCRIPT>
-
-<SCRIPT language="javaScript">
-<!--
-function vv3()
-{window.open('vv3.html','dd','scrollbars=yes,toolbar=no,status=no,width=50,height=100,resizable=1,top=70,left=100');
-}
-//-->
-</SCRIPT>
 
 <script language="JavaScript">
 <!--    
-var num1 = 0  
-gran1 = 7    
-function a1()  
-//{ alert( num1 );
-{ document.pic1.src="slider1/"+ num1 +".jpg" ;} 
+var num = 0  
+gran = 11  
+function a()  
+//{ alert( num );
+{ document.pic.src="slider1/"+ num +".jpg" ;} 
 //-->  
 </script>
-
-<script language="JavaScript">
-<!--    
-var num2 = 0  
-gran2 = 4   
-function a2()  
-//{ alert( num2 );
-{ document.pic2.src="slider2/"+ num2 +".jpg" ;} 
-//-->  
-</script>
-
-<script language="JavaScript">
-<!--    
-var num3 = 0  
-gran3 = 5  
-function a3()  
-//{ alert( num3 );
-{ document.pic3.src="slider3/"+ num3 +".jpg" ;} 
-//-->  
-</script>
-
-<script language="JavaScript">
-<!--    
-var num4 = 0  
-gran4 = 6  
-function a4()  
-//{ alert( num4 );
-{ document.pic4.src="slider4/"+ num4 +".jpg" ;} 
-//-->  
-</script>
-
-<script language="JavaScript">
-<!--    
-var num5 = 0  
-gran5 = 5 
-function a5()  
-//{ alert( num5 );
-{ document.pic5.src="slider5/"+ num5 +".jpg" ;} 
-//-->  
-</script>
-
-
-
-<table width=100% align-center border=0>
+</head>
+<body background="back1.gif">
+<br><br><br><br>
 <center>
 <font face="comic sans ms" size=+4 color=darkblue><b>
-Задание №1<br><hr color=red><small><small><small>
+Задача №1<br><hr color=red>
 </font>
-<center>
-<font face="comic sans ms" size=+3 color=darkblue><b>
-<u>В задаче №1 пункта a) главное:</u><center>
-<font face="comic sans ms" size=+3 color=red><b> 
-Проверить работу асинхронного RS-триггера на логических элементах "ИЛИ-НЕ"
-<script language="JavaScript">
-var photos=new Array()
-var photoslink=new Array()
-var which=0
-
-photos[0]="N-rs1.jpg"
-photos[1]="N-rs2.jpg"
-photos[2]="N-rs3.jpg"
-photos[3]="N-rs4.jpg"
-photos[4]="N-rs5.jpg"
-photos[5]="N-rs5.jpg"
-
-var linkornot=0
-
-photoslink[0]=""
-photoslink[1]=""
-photoslink[2]=""
-photoslink[3]=""
-photoslink[4]=""
-photoslink[5]=""
-
-
-var preloadedimages=new Array()
-for (i=0;i<photos.length;i++){
-preloadedimages[i]=new Image()
-preloadedimages[i].src=photos[i]
-}
-
-
-function applyeffect(){
-if (document.all){
-photoslider.filters.revealTrans.Transition=Math.floor(Math.random()*23)
-photoslider.filters.revealTrans.stop()
-photoslider.filters.revealTrans.apply()
-}
-}
-
-
-
-function playeffect(){
-if (document.all)
-photoslider.filters.revealTrans.play()
-}
-
-function keeptrack(){
-window.status="Image "+(which+1)+" of "+photos.length
-}
-
-
-function backward(){
-if (which>0){
-which--
-applyeffect()
-document.images.photoslider.src=photos[which]
-playeffect()
-keeptrack()
-}
-}
-
-function forward(){
-if (which<photos.length-1){
-which++
-applyeffect()
-document.images.photoslider.src=photos[which]
-playeffect()
-keeptrack()
-}
-}
-
-function transport(){
-window.location=photoslink[which]
-}
-
-</script>
-
-
-<body background="back1.gif">
-<br>
 <center>
 <font face="comic sans ms" size=+3 color=darkblue><b> 
-<a href="javascript: vv6()" > 
-Асинхронный RS-триггер (доп.окно)</a> на логических элементах ИЛИ-НЕ<br><br>
-<IMG SRC="rs-nor.jpg" width=400 ALIGN="center"><br>
-
-<font face="comic sans ms" size=+3 color=blue><b>
-<center>
-ИТАК для решения задачи №1 пункта a) будем придерживаться следующего плана:<br>
-<p align=left>
-<font face="comic sans ms" size=+3 color=darkblue>
-1)Для понимания работы триггера вспомним 
-<a href="javascript: vv3()" > 
-таблицу истинности ИЛИ-НЕ (доп.окно)</a></font><br>
-<SCRIPT language="javaScript">
-
-function vv()
-{window.open('OR-NO.html','dd','scrollbars=yes,toolbar=no,status=no,width=50,height=100,resizable=1,top=70,left=100');
-}
-
-</SCRIPT>
-</font>
-<font face="comic sans ms" size=+3 color=darkblue><b> 
-2)В результате построения триггера на компьютерной модели "TINA" будем ожидать получение таблицы состояний триггера.<br> <br>
-<font face="comic sans ms" size=+1 color=blue><b>
-Q(t) - состояние триггера до поступления управляющих сигналов (изменения на входах R и S);<br> 
-Q(t+1) - состояние триггера после изменения на входах R и S.<br> 
-<center>
-<IMG SRC="table-rs.jpg" ALIGN="center"><br><br>
-</font>
-3)Воспользуемся компьютерной моделью "TINA", которая поможет наглядно проиллюстрировать работу асинхронного RS-триггера<br>
-<center>
-<font face="comic sans ms" size=+3 color=purple><b>
-Этапы построения асинхронного RS-триггера:<br>
-<font face="comic sans ms" size=+1 color=blue>
-(листайте слайды)</font>
-<table border="0" cellspacing="0" cellpadding="0" align=center>
-  <tr>
-    <td width="100%" colspan="2" height="22"><center>
-<script>
-if (linkornot==1)
-document.write('<a href="javascript:transport()">')
-document.write('<img src="'+photos[0]+'" name="photoslider" width="900" height="500" style="filter:revealTrans(duration=2,transition=23)" border=0>')
-if (linkornot==1)
-document.write('</a>')
-</script>
-
-</center></td>
-  </tr>
-  <tr>
-    <td width="50%" height="21"><p align="left">
-<a href="#" onClick="backward();return false"><b><<</b>Предыдущая</a></td>
-    <td width="50%" height="21"><p align="right">
-<a href="#" onClick="forward();return false">Следующая<b>>></b></a></td>
-  </tr>
-</table>
-
-</td>
-</table> 
-  <center>
-<font face="comic sans ms" size=+3 color=purple><b>
-<hr color=red>
-Теперь разберем непосредственно<br>
-работу асинхронного RS-триггера:<br>
-
+Продемонстрируем последовательность действий, иллюстрирующих решение задачи:<br></font>
 <table align=center>
 <td valign=top>
-<A HREF="JavaScript: if (num1>0) { num1=num1-1}; a1()">
+<A HREF="JavaScript: if (num>0) { num=num-1}; a()">
 <img src="L.jpg"></A></td>
 
 <td>
 <div align="center">
-<A HREF="JavaScript: if (num1<gran1) { num1=num1+1}; a1()">
-<IMG SRC="slider1/0.jpg" NAME="pic1" BORDER=1 ></a>
+<A HREF="JavaScript: if (num<gran) { num=num+1}; a()">
+<IMG SRC="slider1/0.jpg" NAME="pic" BORDER=1 ></a>
 <br>
 </div>
 </td>
 
 <td valign=top>
-<A HREF="JavaScript: if (num1<gran1) { num1=num1+1}; a1()">
-<img src="R.jpg"></A></td>
+<A HREF="JavaScript: if (num<gran) { num=num+1}; a()">
+</A></td>
 
 </td>
 </table>
 
-   
-<center>
-<font face="comic sans ms" size=+3 color=darkblue><b>
-<u>В задаче №1 пункта b) главное:</u><center>
-<font face="comic sans ms" size=+3 color=red><b> 
-Проверить работу синхронного RS-триггера на логических элементах "И-НЕ"
-<br>
-<center>
-<font face="comic sans ms" size=+3
- color=darkblue><b> 
 
-<a href="javascript: vv7()" > 
-Синхронный RS-триггер (доп.окно)</a> на логических элементах И-НЕ<br><br>
-<font face="comic sans ms" size=+2 color=darkblue><b> 
-
-<IMG SRC="rsc-nand.jpg" width="400" ALIGN="center"><br>
-<font face="comic sans ms" size=+3 color=blue><b>
-<center>
-ИТАК для решения задачи №1 пункта b) будем придерживаться следующего плана:<br>
-<p align=left>
-<font face="comic sans ms" size=+3 color=darkblue>
-1)Для понимания работы триггера вспомним 
-<a href="javascript: vv4()" > 
-таблицу истинности И-НЕ (доп.окно)</a><br>  
-2)В результате построения триггера в Tina ожидаем получить таблицу состояний триггера.<br> 
-<font face="comic sans ms" size=+1 color=blue><b><br>
-Q(t) - состояние триггера до поступления управляющих сигналов (изменения на входах R и S);<br> 
-Q(t+1) - состояние триггера после изменения на входах R и S.<br> 
-<center>
-</font>
-<IMG SRC="table-rsc.jpg" ALIGN="center"><br>
-3)Воспользуемся компьютерной моделью "TINA", которая поможет наглядно проиллюстрировать работу синхронного RS-триггера<br>
-<center>
-<font face="comic sans ms" size=+3 color=purple><b>
-Этапы построения синхронного RS-триггера:<br><br>
-<center>
-<table align=center>
-<td valign=top>
-<A HREF="JavaScript: if (num2>0) { num2=num2-1}; a2()">
-<img src="L.jpg"></A></td>
-
-<td>
-<div align="center">
-<A HREF="JavaScript: if (num2<gran2) { num2=num2+1}; a2()">
-<IMG SRC="slider2/0.jpg" NAME="pic2" BORDER=1 ></a>
-<br>
-</div>
-</td>
-
-<td valign=top>
-<A HREF="JavaScript: if (num2<gran2) { num2=num2+1}; a2()">
-<img src="R.jpg"></A></td>
-
-</td>
-</table>
-<font face="comic sans ms" size=+3 color=purple><b>
-<hr color=red>
-
-Теперь разберем непосредственно<br>
-работу синхронного RS-триггера на логических<br>
-элементах "И-НЕ"<br>
-<center>
-
-<table align=center>
-<td valign=top>
-<A HREF="JavaScript: if (num3>0) { num3=num3-1}; a3()">
-<img src="L.jpg"></A></td>
-
-<td>
-<div align="center">
-<A HREF="JavaScript: if (num3<gran3) { num3=num3+1}; a3()">
-<IMG SRC="slider3/0.jpg" NAME="pic3" BORDER=1 ></a>
-<br>
-</div>
-</td>
-
-<td valign=top>
-<A HREF="JavaScript: if (num3<gran3) { num3=num3+1}; a3()">
-<img src="R.jpg"></A></td>
-
-</td>
-</table>
-
-</font>
-<center>
-<font face="comic sans ms" size=+3 color=darkblue><b>
-<u>В задаче №1 пункта c) главное:</u><center>
-<font face="comic sans ms" size=+3 color=red><b> 
-Проверить работу асинхронного RS-триггера на <a href="javascript: vv5()" > 
-микросхеме JK (доп.окно)</a><br><br></font>
-<font face="comic sans ms" size=+3 color=red><b> 
-Для решения данной задачи</font> проинвертируем R и S и направим их на инверсные асинхронные входы установки и сброса триггера,<br>
-которые имеют приоритетное значение.<br> На остальные входы будем подавать сигнал 1.<br>
-<IMG SRC="rs-jk.jpg" width="400" ALIGN="center"><br>
-В результате построения на TINA мы должны получить ту же таблицу состояний, которой 
-описывается работа асинхронного RS-триггера на логических элементах ИЛИ-НЕ, за исключением 
-режима R=S=1.<br><br>При R=S=1 мы ожидаем получить режим Т-триггера.<br>
-<font face="comic sans ms" size=+3 color=blue><b>
-<center>
-ИТАК для решения задачи №1 пункта c) будем придерживаться следующего плана:<br>
-<font face="comic sans ms" size=+3 color=purple><b>
-Этапы построения:<br>
-   <center>
-   
-   <table align=center>
-<td valign=top>
-<A HREF="JavaScript: if (num4>0) { num4=num4-1}; a4()">
-<img src="L.jpg"></A></td>
-
-<td>
-<div align="center">
-<A HREF="JavaScript: if (num4<gran4) { num4=num4+1}; a4()">
-<IMG SRC="slider4/0.jpg" NAME="pic4" BORDER=1 ></a>
-<br>
-</div>
-</td>
-
-<td valign=top>
-<A HREF="JavaScript: if (num4<gran4) { num4=num4+1}; a4()">
-<img src="R.jpg"></A></td>
-
-</td>
-</table> 
-
-<font face="comic sans ms" size=+3 color=purple><b>
-<hr color=red>
-Теперь разберем непосредственно<br>
-построение и работу асинхронного RS-триггера на микросхеме JK<br>
-<center>
-
-<table align=center>
-<td valign=top>
-<A HREF="JavaScript: if (num5>0) { num5=num5-1}; a5()">
-<img src="L.jpg"></A></td>
-
-<td>
-<div align="center">
-<A HREF="JavaScript: if (num5<gran5) { num5=num5+1}; a5()">
-<IMG SRC="slider5/0.jpg" NAME="pic5" BORDER=1 ></a>
-<br>
-</div>
-</td>
-
-<td valign=top>
-<A HREF="JavaScript: if (num5<gran5) { num5=num5+1}; a5()">
-<img src="R.jpg"></A></td>
-
-</td>
-</table>
-                  
 </body>
 </html> 

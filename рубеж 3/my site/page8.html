@@ -1,289 +1,46 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=windows-1251">
-<script language="JavaScript">
-
-var photos=new Array()
-var photoslink=new Array()
-var which=0
-
-photos[0]="N-rs6.jpg";
-photos[1]="N-rs7.jpg";
-photos[2]="N-D.jpg"
-photos[3]="N-D1.jpg"
-photos[4]="N-D2.jpg"
-photos[5]="N-D3.jpg"
-
-
-var linkornot=0
-
-photoslink[0]=""
-photoslink[1]=""
-photoslink[2]=""
-photoslink[3]=""
-photoslink[4]=""
-photoslink[5]=""
-
-
-var preloadedimages=new Array()
-for (i=0;i<photos.length;i++){
-preloadedimages[i]=new Image()
-preloadedimages[i].src=photos[i]
-}
-
-
-function applyeffect(){
-if (document.all){
-photoslider.filters.revealTrans.Transition=Math.floor(Math.random()*23)
-photoslider.filters.revealTrans.stop()
-photoslider.filters.revealTrans.apply()
-}
-}
-
-
-
-function playeffect(){
-if (document.all)
-photoslider.filters.revealTrans.play()
-}
-
-function keeptrack(){
-window.status="Image "+(which+1)+" of "+photos.length
-}
-
-
-function backward(){
-if (which>0){
-which--
-applyeffect()
-document.images.photoslider.src=photos[which]
-playeffect()
-keeptrack()
-}
-}
-
-function forward(){
-if (which<photos.length-1){
-which++
-applyeffect()
-document.images.photoslider.src=photos[which]
-playeffect()
-keeptrack()
-}
-}
-
-function transport(){
-window.location=photoslink[which]
-}
-
-</script>
 
 <script language="JavaScript">
 <!--    
-var num6 = 0  
-gran6 = 3    
-function a6()  
-//{ alert( num6 );
-{ document.pic6.src="slider6/"+ num6 +".jpg" ;} 
+var num = 0  
+gran = 17 
+function a()  
+//{ alert( num );
+{ document.pic.src="slider2/"+ num +".jpg" ;} 
 //-->  
 </script>
-
-<script language="JavaScript">
-<!--    
-var num8 = 0  
-gran8 = 4
-function a8()  
-//{ alert( num8 );
-{ document.pic8.src="slider8/"+ num8 +".jpg" ;} 
-//-->  
-</script>
-
-<SCRIPT language="javaScript">
-<!--
-function vv8()
-{window.open('vv8.html','dd','scrollbars=yes,toolbar=no,status=no,width=50,height=100,resizable=1,top=70,left=100');
-}
-//-->
-</SCRIPT>
-
-<SCRIPT language="javaScript">
-<!--
-function vv5()
-{window.open('vv5.html','dd','scrollbars=yes,toolbar=no,status=no,width=50,height=100,resizable=1,top=70,left=100');
-}
-//-->
-</SCRIPT>
-
-<SCRIPT language="javaScript">
-<!--
-function vv4()
-{window.open('vv4.html','dd','scrollbars=yes,toolbar=no,status=no,width=50,height=100,resizable=1,top=70,left=100');
-}
-//-->
-</SCRIPT>
-
-
-
-<script language="JavaScript">
-<!--    
-var num7 = 0  
-gran7 = 6
-function a7()  
-//{ alert( num7 );
-{ document.pic7.src="slider7/"+ num7 +".jpg" ;} 
-//-->  
-</script>
-
-
 </head>
 <body background="back1.gif">
 <br><br><br><br>
 <center>
-<title>Задание2</title>
-<meta http-equiv="content-type" content="text/html; charset=windows-1251">
-
-<table width=100% align-center border=0>
-<center>
 <font face="comic sans ms" size=+4 color=darkblue><b>
-Задание №2<br><hr color=red><small><small><small>
+Задача №2<br><hr color=red>
 </font>
 <center>
-<font face="comic sans ms" size=+3 color=darkblue><b>
-<u>В задаче №2 пункта a) главное:</u><center>
-<font face="comic sans ms" size=+3 color=red><b> 
-Проверить работу D-триггера построенного на логических элементах "И-НЕ"<br><br></font>
-<a href="javascript: vv8()" > 
-D-триггер (доп.окно)</a> на логических элементах И-НЕ<br>
-<font face="comic sans ms" size=+3 color=darkblue><b><hr color=red> 
-D-триггер — это синхронный триггер, который задерживает поступающую на его вход информацию до прихода очередного синхронизирующего импульса.<br> <hr color=red>
-<IMG SRC="d-nand.jpg" width="400" ALIGN="center"><br>
-<font face="comic sans ms" size=+3 color=red><b> 
-Для решения данной задачи</font><p align=left> 
 <font face="comic sans ms" size=+3 color=darkblue><b> 
-1)Построим в среде TINA D-триггер на <a href="javascript: vv4()" > 
-элементах И-НЕ (доп.окно)</a>.<br>
-2)В результате построения триггера в TINA будем ожидать получить таблицу состояний триггера.<br>
-<center>
-Q(t) - состояние триггера до поступления управляющих сигналов (изменения на входах D и C);<br> 
-Q(t+1) - состояние триггера после изменения на входах D и C.<br> 
-</center>
-<IMG SRC="table-d.jpg" ALIGN="center"><br>
-<font face="comic sans ms" size=+3 color=blue><b>
-<center>
-ИТАК для решения задачи №2 пункта a) будем придерживаться следующего плана:<br>
-<font face="comic sans ms" size=+3 color=purple><b>
-Этапы построения: <br>
-<font face="comic sans ms" size=+1 color=blue>
-(листайте слайды)</font>
-<table border="0" cellspacing="0" cellpadding="0" align=center>
-  <tr>
-    <td width="100%" colspan="2" height="22"><center>
-<script>
-if (linkornot==1)
-document.write('<a href="javascript:transport()">')
-document.write('<img src="'+photos[0]+'" name="photoslider" width="700" height="440" style="filter:revealTrans(duration=2,transition=23)" border=0>')
-if (linkornot==1)
-document.write('</a>')
-</script>
-
-</center></td>
-  </tr>
-  <tr>
-    <td width="50%" height="21"><p align="left">
-<a href="#" onClick="backward();return false"><b><<</b>Предыдущая</a></td>
-    <td width="50%" height="21"><p align="right">
-<a href="#" onClick="forward();return false">Следующая<b>>></b></a></td>
-  </tr>
-</table>
-</td>
-<font face="comic sans ms" size=+3 color=purple><b>
-<hr color=red>
-Теперь разберем непосредственно<br>
-работу D-триггера на элементах И-НЕ<br>
-<center>
+Продемонстрируем последовательность действий, иллюстрирующих решение задачи:<br></font>
 <table align=center>
 <td valign=top>
-<A HREF="JavaScript: if (num6>0) { num6=num6-1}; a6()">
+<A HREF="JavaScript: if (num>0) { num=num-1}; a()">
 <img src="L.jpg"></A></td>
 
 <td>
 <div align="center">
-<A HREF="JavaScript: if (num6<gran6) { num6=num6+1}; a6()">
-<IMG SRC="slider6/0.jpg" NAME="pic6" BORDER=1 ></a>
+<A HREF="JavaScript: if (num<gran) { num=num+1}; a()">
+<IMG SRC="slider2/0.jpg" NAME="pic" BORDER=1 ></a>
 <br>
 </div>
 </td>
 
 <td valign=top>
-<A HREF="JavaScript: if (num6<gran6) { num6=num6+1}; a6()">
-<img src="R.jpg"></A></td>
-
-</td>
-</table>
-Таким образом</font> полученная таблица истинности в TINA совпала с теоретической.
-<hr color=red><small><small><small>
-<center>
-<font face="comic sans ms" size=+3 color=darkblue><b>
-<u>В задаче №2 пункта b) главное:</u><center>
-Проверить работу D-триггера на микросхеме JK
-D-триггер на <a href="javascript: vv5()" > 
-микросхеме JK (доп.окно)</a><br><br>
-<IMG SRC="d-jk.jpg" width="400" ALIGN="center"><br>
-<font face="comic sans ms" size=+3 color=red><b> 
-Для решения данной задачи</font><br><p align="left">
-1)Cоединим вход K со входом J через дополнительный инвертор <br>
-2)Cоединим инверсные асинхронные входы и будем подавать на них "1"<br>
-3)В результате построения на TINA мы должны получить ту же таблицу состояний, которой 
-описывается работа D-триггера на логических элементах И-НЕ.<br>
-<font face="comic sans ms" size=+3 color=blue><b>
-<center>
-ИТАК для решения задачи №2 пункта b) будем придерживаться следующего плана:<br>
-<font face="comic sans ms" size=+3 color=purple><b>
-Этапы построения: <br>
-<table align=center>
-<td valign=top>
-<A HREF="JavaScript: if (num7>0) { num7=num7-1}; a7()">
-<img src="L.jpg"></A></td>
-
-<td>
-<div align="center">
-<A HREF="JavaScript: if (num7<gran7) { num7=num7+1}; a7()">
-<IMG SRC="slider7/0.jpg" NAME="pic7" BORDER=1 ></a>
-<br>
-</div>
-</td>
-
-<td valign=top>
-<A HREF="JavaScript: if (num7<gran7) { num7=num7+1}; a7()">
-<img src="R.jpg"></A></td>
+<A HREF="JavaScript: if (num<gran) { num=num+1}; a()">
+</A></td>
 
 </td>
 </table>
 
-<hr color=red>
-Теперь разберем непосредственно<br>
-построение и работу D-триггера на микросхеме JK<br>
-<center>
-
-<table align=center>
-<td valign=top>
-<A HREF="JavaScript: if (num8>0) { num8=num8-1}; a8()">
-<img src="L.jpg"></A></td>
-
-<td>
-<div align="center">
-<A HREF="JavaScript: if (num8<gran8) { num8=num8+1}; a8()">
-<IMG SRC="slider8/0.jpg" NAME="pic8" BORDER=1 ></a>
-<br>
-</div>
-</td>
-
-<td valign=top>
-<A HREF="JavaScript: if (num8<gran8) { num8=num8+1}; a8()">
-<img src="R.jpg"></A></td>
-
-</td>
-</table>
 
 </body>
 </html> 

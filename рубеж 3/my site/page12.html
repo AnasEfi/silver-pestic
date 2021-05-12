@@ -2,184 +2,45 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=windows-1251">
 
-<SCRIPT language="javaScript">
-<!--
-function vv5()
-{window.open('vv5.html','dd','scrollbars=yes,toolbar=no,status=no,width=50,height=100,resizable=1,top=70,left=100');
-}
-//-->
-</SCRIPT>
-
-<script language="JavaScript">
-
-var photos=new Array()
-var photoslink=new Array()
-var which=0
-
-photos[0]="N-DJK.jpg"
-photos[1]="N-DJK1.jpg"
-photos[2]="N-DJK2.jpg"
-photos[3]="N-DJK3.jpg"
-photos[4]="N-TJK3.jpg"
-
-var linkornot=0
-
-photoslink[0]=""
-photoslink[1]=""
-photoslink[2]=""
-photoslink[3]=""
-photoslink[4]=""
-
-
-var preloadedimages=new Array()
-for (i=0;i<photos.length;i++){
-preloadedimages[i]=new Image()
-preloadedimages[i].src=photos[i]
-}
-
-
-function applyeffect(){
-if (document.all){
-photoslider.filters.revealTrans.Transition=Math.floor(Math.random()*23)
-photoslider.filters.revealTrans.stop()
-photoslider.filters.revealTrans.apply()
-}
-}
-
-
-
-function playeffect(){
-if (document.all)
-photoslider.filters.revealTrans.play()
-}
-
-function keeptrack(){
-window.status="Image "+(which+1)+" of "+photos.length
-}
-
-
-function backward(){
-if (which>0){
-which--
-applyeffect()
-document.images.photoslider.src=photos[which]
-playeffect()
-keeptrack()
-}
-}
-
-function forward(){
-if (which<photos.length-1){
-which++
-applyeffect()
-document.images.photoslider.src=photos[which]
-playeffect()
-keeptrack()
-}
-}
-
-function transport(){
-window.location=photoslink[which]
-}
-
-</script>
-
 <script language="JavaScript">
 <!--    
-var num9 = 0  
-gran9 = 4   
-function a9()  
-//{ alert( num9 );
-{ document.pic9.src="slider9/"+ num9 +".jpg" ;} 
+var num = 0  
+gran = 16 
+function a()  
+//{ alert( num );
+{ document.pic.src="slider3/"+ num +".jpg" ;} 
 //-->  
 </script>
-
 </head>
-<style type="text/css">
-<!--
-a {color: darkblue; font-size: 24; font-weight: ; left: 10px}
-a:hover {color: red; font-size: 24; font-weight: ; left: 10px}
--->
-</style>
-
-
-
 <body background="back1.gif">
 <br><br><br><br>
 <center>
 <font face="comic sans ms" size=+4 color=darkblue><b>
-Задание №3<br><hr color=red><small><small><small>
+Задача №3<br><hr color=red>
 </font>
 <center>
-<font face="comic sans ms" size=+3 color=darkblue><b>
-<u>В задаче №3 главное:</u><center><font face="comic sans ms" size=+3 color=red><b> 
-Проверить работу T-триггера на <a href="javascript: vv5()" > 
-микросхеме JK (доп.окно)</a>
-</font><font face="comic sans ms" size=+3 color=darkblue><b><br>
-Для решения данной задачи:</font><p align="left"><br>
-1)Возьмем построенный на JK-микросхеме D-триггер и будем его менять.<br>
-<IMG SRC="d-jk.jpg" width="400" ALIGN="center"><br>
-2) Отсоединим вход D,
-а выход с Q-инверсного отправим на вход J.<br>
-3)В результате построения на Tina мы ожидаем увидеть, как Q изменяет состояние с приходом импульса на С,
-т.е. получить счетчик импульсов.<br>
-<IMG SRC="t-d.jpg" width="400" ALIGN="center"><br>
-<font face="comic sans ms" size=+3 color=blue><b>
-<center>
-<hr color=red>
-ИТАК для решения задачи №3 будем придерживаться следующего плана:<br>
-<font face="comic sans ms" size=+3 color=purple><b><center>
-Этапы построения<br>
-<font face="comic sans ms" size=+1 color=blue><center>
-(листайте слайды)</font>
-<table border="0" cellspacing="0" cellpadding="0" align=center>
-  <tr>
-    <td width="100%" colspan="2" height="22"><center>
-<script>
-if (linkornot==1)
-document.write('<a href="javascript:transport()">')
-document.write('<img src="'+photos[0]+'" name="photoslider" style="filter:revealTrans(duration=2,transition=23)" border=0>')
-if (linkornot==1)
-document.write('</a>')
-</script>
-
-</center></td>
-  </tr>
-  <tr>
-    <td width="50%" height="21"><p align="left">
-<a href="#" onClick="backward();return false"><b><<</b>Предыдущая</a></td>
-    <td width="50%" height="21"><p align="right">
-<a href="#" onClick="forward();return false">Следующая<b>>></b></a></td>
-  </tr>
-</table>
-
-</td>
-</table> 
-<font face="comic sans ms" size=+3 color=purple><b>
-<hr color=red>
-Разберем работу и построение T-триггера на микросхеме JK<br>
-<center>
-
+<font face="comic sans ms" size=+3 color=darkblue><b> 
+Продемонстрируем последовательность действий, иллюстрирующих решение задачи:<br></font>
 <table align=center>
 <td valign=top>
-<A HREF="JavaScript: if (num9>0) { num9=num9-1}; a9()">
+<A HREF="JavaScript: if (num>0) { num=num-1}; a()">
 <img src="L.jpg"></A></td>
 
 <td>
 <div align="center">
-<A HREF="JavaScript: if (num9<gran9) { num9=num9+1}; a9()">
-<IMG SRC="slider9/0.jpg" NAME="pic9" BORDER=1 ></a>
+<A HREF="JavaScript: if (num<gran) { num=num+1}; a()">
+<IMG SRC="slider3/0.jpg" NAME="pic" BORDER=1 ></a>
 <br>
 </div>
 </td>
 
 <td valign=top>
-<A HREF="JavaScript: if (num9<gran9) { num9=num9+1}; a9()">
-<img src="R.jpg"></A></td>
+<A HREF="JavaScript: if (num<gran) { num=num+1}; a()">
+</A></td>
 
 </td>
 </table>
 
-                  
+
 </body>
 </html> 

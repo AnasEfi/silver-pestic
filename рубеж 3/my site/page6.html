@@ -1,164 +1,46 @@
-<html>
+<<html>
 <head>
-<style type="text/css">
 <meta http-equiv="content-type" content="text/html; charset=windows-1251">
-<!--
-a {color: darkblue; font-size: 24; font-weight: ; left: 10px}
-a:hover {color: red; font-size: 24; font-weight: ; left: 10px}
--->
-</style>
 
 <script language="JavaScript">
-
-var photos=new Array()
-var photoslink=new Array()
-var which=0
-
-photos[0]="N-arsjk.jpg"
-photos[1]="N-arsjk1.jpg"
-photos[2]="N-arsjk2.jpg"
-photos[3]="N-arsjk3.jpg"
-photos[4]="N-arsjk4.jpg"
-
-
-
-var linkornot=0
-
-photoslink[0]=""
-photoslink[1]=""
-photoslink[2]=""
-photoslink[3]=""
-photoslink[4]=""
-
-
-var preloadedimages=new Array()
-for (i=0;i<photos.length;i++){
-preloadedimages[i]=new Image()
-preloadedimages[i].src=photos[i]
-}
-
-
-function applyeffect(){
-if (document.all){
-photoslider.filters.revealTrans.Transition=Math.floor(Math.random()*23)
-photoslider.filters.revealTrans.stop()
-photoslider.filters.revealTrans.apply()
-}
-}
-
-
-
-function playeffect(){
-if (document.all)
-photoslider.filters.revealTrans.play()
-}
-
-function keeptrack(){
-window.status="Image "+(which+1)+" of "+photos.length
-}
-
-
-function backward(){
-if (which>0){
-which--
-applyeffect()
-document.images.photoslider.src=photos[which]
-playeffect()
-keeptrack()
-}
-}
-
-function forward(){
-if (which<photos.length-1){
-which++
-applyeffect()
-document.images.photoslider.src=photos[which]
-playeffect()
-keeptrack()
-}
-}
-
-function transport(){
-window.location=photoslink[which]
-}
-
+<!--    
+var num = 0  
+gran = 10 
+function a()  
+//{ alert( num );
+{ document.pic.src="slider5/"+ num +".jpg" ;} 
+//-->  
 </script>
 </head>
 <body background="back1.gif">
 <br><br><br><br>
 <center>
-<title>Задание1</title>
-<meta http-equiv="content-type" content="text/html; charset=windows-1251">
-
-<table width=100% align-center border=0>
-<center>
 <font face="comic sans ms" size=+4 color=darkblue><b>
-Задание №1<br><hr color=red><small><small><small>
+Задача №5<br><hr color=red>
 </font>
 <center>
-<font face="comic sans ms" size=+3 color=darkblue><b>
-<u>В задаче №1 пункта 3 главное:</u><center>
-<font face="comic sans ms" size=+3 color=red><b> 
-Проверить работу асинхронного RS-триггера на микросхеме JK<br><br></font>
-<font face="comic sans ms" size=+3 color=red><b> 
-Для решения данной задачи</font> проинвертируем R и S и направим их на инверсные асинхронные входы установки и сброса триггера,<br>
-которые имеют приоритетное значение.<br> На остальные входы будем подавать сигнал 1.<br>
-<IMG SRC="rs-jk.jpg" ALIGN="center"><br>
-В результате построения на TINA мы должны получить ту же таблицу состояний, которой 
-описывается работа асинхронного RS-триггера на логических элементах ИЛИ-НЕ, за исключением 
-режима R=S=1.<br><br>При R=S=1 мы ожидаем получить режим Т-триггера.<br>
-<font face="comic sans ms" size=+3 color=blue><b>
-<center>
-ИТАК для решения задачи №1 пункта 2 будем придерживаться следующего плана:<br>
-<font face="comic sans ms" size=+3 color=purple><b>
-Этапы построения:<br>
-<font face="comic sans ms" size=+1 color=blue>
-(листайте слайды)</font>
-<table border="0" cellspacing="0" cellpadding="0" align=center>
-  <tr>
-    <td width="100%" colspan="2" height="22"><center>
-<script>
-if (linkornot==1)
-document.write('<a href="javascript:transport()">')
-document.write('<img src="'+photos[0]+'" name="photoslider" style="filter:revealTrans(duration=2,transition=23)" border=0>')
-if (linkornot==1)
-document.write('</a>')
-</script>
-</center></td>
-  </tr>
-  <tr>
-    <td width="50%" height="21"><p align="left">
-<a href="#" onClick="backward();return false"><b><<</b>Предыдущая</a></td>
-    <td width="50%" height="21"><p align="right">
-<a href="#" onClick="forward();return false">Следующая<b>>></b></a></td>
-  </tr>
-</table>
+<font face="comic sans ms" size=+3 color=darkblue><b> 
+Продемонстрируем последовательность действий, иллюстрирующих решение задачи:<br></font>
+<table align=center>
+<td valign=top>
+<A HREF="JavaScript: if (num>0) { num=num-1}; a()">
+<img src="L.jpg"></A></td>
+
+<td>
+<div align="center">
+<A HREF="JavaScript: if (num<gran) { num=num+1}; a()">
+<IMG SRC="slider5/0.jpg" NAME="pic" BORDER=1 ></a>
+<br>
+</div>
+</td>
+
+<td valign=top>
+<A HREF="JavaScript: if (num<gran) { num=num+1}; a()">
+</A></td>
 
 </td>
-</table> 
-   <center>
-<font face="comic sans ms" size=+3 color=purple><b>
-<hr color=red>
-Теперь разберем непосредственно<br>
-построение и работу асинхронного RS-триггера на микросхеме JK<br>
-<center>
-<img src="N-rs6.jpg" width=70% border=1></p>   
-<br>
-Установим на поле необходимые элементы
-<img src="N-rs7.jpg" width=70% border=1></p>
-Перетаскивая элементы на поле и соединяя их получим схему асинхронного RS-триггера на микросхеме JK<br>
- в соответствии с заданием
- <img src="N-arsjk4.jpg" width=70% border=1></p>
-Включим процесс моделирования и пронаблюдаем<br> за работой триггера<br>
- <img src="N-arsjk5.jpg" width=70% border=1></p>
-Изменим положение переключателей
- <img src="N-arsjk6.jpg" width=70% border=1></p>
-Еще раз изменим положение переключателей
- <img src="N-arsjk8.jpg" width=70% border=1></p>
-Понаблюдаем за новым состоянием триггера
- <img src="N-arsjk9.jpg" width=70% border=1></p>
- Пронаблюдаем за запрещенным состоянием
- <img src="N-arsjk10.jpg" width=70% border=1></p>
-</body>
+</table>
 
+
+</body>
 </html> 
